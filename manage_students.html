@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="admindashboardstyles.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header Section -->
+        <header>
+            <h1>Manage Students</h1>
+        </header>
+
+        <!-- Student List Table -->
+        <section>
+            <h2>Student List</h2>
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic student rows will be inserted here by JS -->
+                </tbody>
+            </table>
+            <button onclick="openAddStudentModal()">Add New Student</button>
+        </section>
+
+        <!-- Add/Edit Student Modal -->
+        <div id="student-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Add New Student</h3>
+                    <button onclick="closeModal()">X</button>
+                </div>
+                <div class="modal-body">
+                    <form id="student-form">
+                        <label for="student-id">Student ID:</label>
+                        <input type="text" id="student-id" name="student-id" required><br><br>
+
+                        <label for="student-name">Name:</label>
+                        <input type="text" id="student-name" name="student-name" required><br><br>
+
+                        <label for="student-email">Email:</label>
+                        <input type="email" id="student-email" name="student-email" required><br><br>
+
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="manage_students.js"></script>
+
+</body>
+
+</html>

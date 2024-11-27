@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboardstylesclassicacademic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome to Your Student Dashboard</h1>
+        </header>
+
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>What is the 2+2 IEP?</h2>
+            <p>The International Engineering Program (IEP) is an exciting opportunity for students to complete the first two years of their engineering education at Thapar Institute and the remaining two years at a partner university abroad. This unique program is designed to provide global exposure and academic excellence, helping students grow into well-rounded professionals.</p>
+        </section>
+
+        <!-- University Selection Section -->
+        <section class="university-details">
+            <h2>Select a University</h2>
+            <p>Click on a university below to explore more about it and access all the details you need for your academic journey:</p>
+            
+            <!-- University Buttons with Links -->
+            <div class="university-buttons">
+                <button onclick="window.location.href='university_1_page.html'">
+                    <img src="./assets/uni1.jpg" alt="University 1" class="university-image">
+                    <span>University of Queensland</span>
+                
+                </button>
+                <button onclick="window.location.href='university_2_page.html'">
+                    <img src="./assets/uni2.jpg" alt="University 2" class="university-image">
+                    <span>University of Toledo</span>
+                </button>
+                <button onclick="window.location.href='university_3_page.html'">
+                    <img src="./assets/uni3.jpg" alt="University 3" class="university-image">
+                    <span>University of New South Wales</span>
+                </button>
+                <button onclick="window.location.href='university_4_page.html'">
+                    <img src="./assets/uni4.jpg" alt="University 4" class="university-image">
+                    <span>Trinity College Dublin</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Thapar Institute. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure proper positioning for the pseudo-element */
+  z-index: 1; /* Ensure content appears above the background */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/uni2.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.6; /* Adjust the opacity here */
+  z-index: -1; /* Ensure the background stays behind the content */
+}
+
+/* Class for the main page background */
+.background-main {
+  background: url("./assets/uni2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main heading styling */
+.main-heading {
+  position: absolute;
+  left: 5vw; /* Align with the left edge of the left image */
+  top: 5vh; /* Move it down */
+  font-size: 2.5rem; /* Adjust font size as desired */
+  color: #202020; /* Adjust text color if needed */
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Initially hidden */
+  animation: appear 0.85s forwards; /* Animation for appearing */
+  animation-delay: 2s; /* Delay to start after image animation */
+}
+
+/* Picture 1: Large scrolling image */
+.picture-1 {
+  position: absolute;
+  width: 55vw; /* Adjusted width */
+  height: 65vh; /* Set a fixed height */
+  left: 5vw; /* Detach from left edge */
+  top: calc(-100vh + (100vh / 12)); /* Move down by 1/12 of the total height */
+  animation: slideInTop 2s forwards; /* Animation for coming in from the top */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.picture-1 img {
+  width: 100%;
+  height: 100%; /* Set height to fill the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Picture 2: Smaller image */
+.picture-2 {
+  position: absolute;
+  width: 25vw; /* Adjusted width */
+  height: 30vh; /* Set a fixed height */
+  left: calc(5vw + 55vw + 2vw); /* Align to the right of Picture 1 with some space */
+  top: calc(-100vh + (100vh / 12)); /* Move down by 1/12 of the total height */
+  animation: slideInBottom 2s forwards; /* Animation for coming in from the top */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.picture-2 img {
+  width: 100%;
+  height: 100%; /* Set height to fill the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Text and options below the images */
+.text-options {
+  position: absolute;
+  top: calc(45vh + (100vh / 12)); /* Adjust position below both images */
+  right: 15vw;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  animation: appear 0.85s forwards; /* Animation for appearing */
+  animation-delay: 2s; /* Delay to start after image animation */
+}
+
+.text-options h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  
+}
+
+.role-selection button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background-color: #202020;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.role-selection button:hover {
+  background-color: #696969;
+}
+
+.login-fields {
+  margin-top: 20px;
+}
+
+.login-fields input {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+}
+
+/* Updated animation for Picture 1: Large scrolling image */
+@keyframes slideInTop {
+  0% {
+    top: -100vh; /* Start off-screen from the top */
+    opacity: 0;
+  }
+  100% {
+    top: 17vh; /* Final position */
+    opacity: 1;
+  }
+}
+
+/* Updated animation for Picture 2: Smaller image */
+@keyframes slideInBottom {
+  0% {
+    top: 100vh; /* Start off-screen from the top */
+    opacity: 0;
+  }
+  100% {
+    top: 17vh; /* Align with the top of Picture 1 */
+    opacity: 1;
+  }
+}
+
+/* Animation for the text-options appearing */
+@keyframes appear {
+  0% {
+    opacity: 0; /* Initially hidden */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+/* Styling for the text overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+}
+
+/* Show the text on hover */
+.picture-1:hover .text-overlay {
+  opacity: 1; /* Show the text when hovering over the image */
+}
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #202020;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-container button:hover {
+  background-color: #696969;
+}

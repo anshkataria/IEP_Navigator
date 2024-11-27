@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Student Registration</h2>
+        <form id="student-register-form">
+            <input type="text" id="newStudentID" placeholder="Choose a Student ID" required>
+            <input type="password" id="newPassword" placeholder="Choose a Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <p id="registerSuccess" style="color:green; display:none;">Registration successful! You can now log in.</p>
+        <p id="registerError" style="color:red; display:none;">Student ID already exists. Please try another one.</p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #002040; /* Deep Navy Blue */
+    color: #FFFFFF; /* White text */
+    overflow-x: hidden;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #FFFFFF; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: slideDown 1.5s ease-in-out;
+}
+
+/* Overview Section */
+.overview {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    color: #002040; /* Deep Navy for text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: popIn 1.5s ease-in-out;
+}
+
+.overview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.overview p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* University Section */
+.university-details {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.university-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #E6B800; /* Gold Accent */
+}
+
+.university-details p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* University Buttons */
+.university-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.university-buttons button {
+    background-color: #002040; /* Deep Navy */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #E6B800; /* Gold Border */
+    border-radius: 16px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.university-buttons button:hover {
+    background-color: #E6B800; /* Gold on hover */
+    color: #002040; /* Navy for text */
+}
+
+.university-buttons img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1s ease-in-out;
+}
+
+.university-buttons span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #002040; /* Deep Navy */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF; /* White text */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .university-buttons {
+        flex-direction: column;
+    }
+    .university-buttons button {
+        width: 80%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Information</title>
+    <link rel="stylesheet" href="admindashboardstyles.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Visa Information</h1>
+        </header>
+
+        <!-- Visa Requirements Table -->
+        <section>
+            <h2>Visa Requirements</h2>
+            <table id="visa-table">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic visa requirements rows will be inserted here by JS -->
+                </tbody>
+            </table>
+            <button onclick="openAddVisaModal()">Add Visa Requirement</button>
+        </section>
+
+        <!-- Add/Edit Visa Requirement Modal -->
+        <div id="visa-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Add Visa Requirement</h3>
+                    <button onclick="closeModal()">X</button>
+                </div>
+                <div class="modal-body">
+                    <form id="visa-form">
+                        <label for="visa-country">Country:</label>
+                        <input type="text" id="visa-country" name="visa-country" required><br><br>
+
+                        <label for="visa-requirement">Visa Requirement:</label>
+                        <textarea id="visa-requirement" name="visa-requirement" required></textarea><br><br>
+
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="visa_information.js"></script>
+
+</body>
+
+</html>
